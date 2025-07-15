@@ -13,27 +13,23 @@ function Layout() {
   }, []);
 
   if (loading) {
-    return <Loader />; // show only loader initially
+    return <Loader />;
   }
 
   return (
     <>
-      {/* Background */}
       <div className="fixed inset-0 -z-10">
         <GridBackgroundDemo />
       </div>
 
-      {/* Navbar */}
       <div className="mt-10">
         <Navbar />
       </div>
 
-      {/* Page Content */}
       <main className="relative z-10 pt-[100px] px-4 mt-10">
         <Outlet />
       </main>
 
-      {/* You can optionally add the footer below */}
       {/* <Footer /> */}
     </>
   );
