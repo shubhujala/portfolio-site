@@ -7,10 +7,8 @@ import profile from "../../assets/profile.jpg"
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMdUp, setIsMdUp] = useState(window.innerWidth >= 768); // Tailwind md = 768px
+  const [isMdUp, setIsMdUp] = useState(window.innerWidth >= 768); 
   const controls = useAnimation();
-
-  // Track window resize to update isMdUp
   useEffect(() => {
     const handleResize = () => {
       setIsMdUp(window.innerWidth >= 768);
@@ -49,7 +47,7 @@ export default function Navbar() {
         <motion.nav
           animate={controls}
           className="fixed md:top-8  left-1/2 transform -translate-x-1/2 z-50
-            px-6 py-4 bg-white/60 dark:bg-gray-700/70
+            px-6 py-4 bg-white/60 dark:bg-gray-700/50 border-[#b2bec3]
             shadow-md backdrop-blur-md 
             transition-all duration-500 ease-in-out hidden md:block"
         >
