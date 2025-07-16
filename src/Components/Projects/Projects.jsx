@@ -14,7 +14,7 @@ const projects = [
     repo: "https://github.com/Shubh-ujala/dev_Project",
   },
   {
-    title: "Personal Mini Project",
+    title: "Currency Converter",
     type: "Personal Mini Project",
     date: " June 2025",
     description:
