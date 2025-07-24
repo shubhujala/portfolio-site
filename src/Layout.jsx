@@ -17,12 +17,10 @@ function Layout() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="fixed inset-0 -z-10">
-        <GridBackgroundDemo />
-      </div>
+    <div className="relative min-h-screen bg-black text-white">
+      <GridBackgroundDemo />
 
-      <div className="mt-10">
+      <div className="relative z-50 mt-10">
         <Navbar />
       </div>
 

@@ -3,16 +3,22 @@ import React from "react";
 
 export function GridBackgroundDemo() {
   return (
-     <div className="relative flex h-[50rem] w-full items-center justify-center min-h-screen bg-black">
-      <div
-        className={cn(
-          "absolute inset-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#404040_1px,transparent_1px)]",
-        )}
-      />
-      {/* Radial gradient for the container to give a faded look */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-    </div>
+     <div 
+       className="fixed inset-0 w-full h-full bg-black"
+       style={{
+         backgroundImage: 'radial-gradient(#808080 1px, transparent 1px)',
+         backgroundSize: '20px 20px',
+         minHeight: '100vh',
+       }}
+     >
+       {/* Radial gradient overlay for faded effect */}
+       <div 
+         className="absolute inset-0 w-full h-full"
+         style={{
+           background: 'radial-gradient(ellipse at center, transparent 20%, black)',
+           minHeight: '100vh',
+         }}
+       ></div>
+     </div>
   );
 }
