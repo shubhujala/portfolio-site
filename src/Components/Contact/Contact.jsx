@@ -5,7 +5,7 @@ import { MdLocationOn } from "react-icons/md";
 
 export default function ContactSection() {
   return (
-    <section className=" text-[#b2bec3] px-6 md:py-15 mb-10 py-50">
+    <section className=" text-[#b2bec3] px-6 md:py-15 mb-10 py-40">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl md:text-6xl font-bold mb-6 tracking-wide">
           GET IN TOUCH
