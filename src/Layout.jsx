@@ -17,7 +17,7 @@ function Layout() {
   }
 
   return (
-    <>
+    <div className="min-h-screen bg-black text-white">
       <div className="fixed inset-0 -z-10">
         <GridBackgroundDemo />
       </div>
@@ -31,7 +31,7 @@ function Layout() {
       </main>
 
       {/* <Footer /> */}
-    </>
+    </div>
   );
 }
 

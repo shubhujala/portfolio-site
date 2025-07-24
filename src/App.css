@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Ensure dark background everywhere */
+html, body, #root {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
 
 *::-webkit-scrollbar {
   display: none; 
