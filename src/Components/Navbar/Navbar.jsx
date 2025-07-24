@@ -113,7 +113,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && !isMdUp && (
-        <div className="fixed top-[64px] left-8 right-20 w-[90%]  z-40 mt-5 rounded bg-white/80 dark:bg-gray-700/60 backdrop-blur-md px-6 py-4 shadow-md md:hidden">
+        <div className="fixed top-[80px] left-5 right-5 z-40 mt-2 rounded-lg bg-white/80 dark:bg-gray-700/60 backdrop-blur-md px-6 py-4 shadow-md md:hidden">
           <ul className="flex flex-col gap-4 text-lg font-semibold text-gray-800 dark:text-white">
             <li >
               <NavLink
