@@ -4,7 +4,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  base: '/portfolio-site/', // Updated to match new repository name
+  base: '/', // Changed for custom domain - no subdirectory needed
   build: {
     outDir: 'dist',
   },
