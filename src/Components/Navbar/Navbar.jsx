@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
-import profile from "../../assets/profile.jpg"
+import profile from "../../assets/profile.jpg";
+import cv from "../../assets/cv_final.pdf";
+
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMdUp, setIsMdUp] = useState(window.innerWidth >= 768); 
+  const [isMdUp, setIsMdUp] = useState(window.innerWidth >= 768);
   const controls = useAnimation();
   useEffect(() => {
     const handleResize = () => {
@@ -52,43 +54,54 @@ export default function Navbar() {
             transition-all duration-500 ease-in-out hidden md:block"
         >
           <div className="flex justify-between items-center gap-8">
-             <div className="flex gap-3">
-              <img src={profile} alt="profile pic" className="rounded-full  h-10 w-10 " />
-              <div className="text-white mt-2 font-mono">
-                Shubh Ujala
-              </div>
-             </div>
+            <div className="flex gap-3">
+              <img
+                src={profile}
+                alt="profile pic"
+                className="rounded-full  h-10 w-10 "
+              />
+              <div className="text-white mt-2 font-mono">Shubh Ujala</div>
+            </div>
             <ul className="flex gap-8 text-lg font-semibold text-gray-800 dark:text-white">
               <li>
                 <NavLink
-                    to="/"
-                    className={({isActive}) => 
-                      `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400":"text-gray-200 hover:text-red-400"}`
-                    }
+                  to="/"
+                  className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400" : "text-gray-200 hover:text-red-400"}`
+                  }
                 >
-                 Home
+                  Home
                 </NavLink>
               </li>
-            
+
               <li className="cursor-pointer hover:text-red-400">
-                 <NavLink
-                    to="/projects"
-                    className={({isActive}) => 
-                      `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400":"text-gray-200 hover:text-red-400"}`
-                    }
+                <NavLink
+                  to="/projects"
+                  className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400" : "text-gray-200 hover:text-red-400"}`
+                  }
                 >
-                 Projects
+                  Projects
                 </NavLink>
               </li>
-              <li >
+              <li>
                 <NavLink
-                    to="/contact"
-                    className={({isActive}) => 
-                      `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400":"text-gray-200 hover:text-red-400"}`
-                    }
+                  to="/contact"
+                  className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400" : "text-gray-200 hover:text-red-400"}`
+                  }
                 >
-                 Contact
+                  Contact
                 </NavLink>
+              </li>
+              <li>
+                <a
+                  href={cv}
+                  download
+                  className="cursor-pointer text-gray-200 hover:text-red-400"
+                >
+                  Download CV 
+                </a>
               </li>
             </ul>
           </div>
@@ -99,13 +112,21 @@ export default function Navbar() {
             shadow-md backdrop-blur-md m-5 rounded-lg md:hidden"
         >
           <div className="flex justify-between items-center">
-              <div className="flex ">
-                <img src={profile} alt="profile pic" className="rounded-full  h-10 w-10 " />
-                <div className="text-white mt-2 ml-2 font-mono">Shubh Ujala</div>
-              </div>
-           
+            <div className="flex ">
+              <img
+                src={profile}
+                alt="profile pic"
+                className="rounded-full  h-10 w-10 "
+              />
+              <div className="text-white mt-2 ml-2 font-mono">Shubh Ujala</div>
+            </div>
+
             <button onClick={toggleMenu}>
-              {isMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6 text-white" />
+              ) : (
+                <Menu className="w-6 h-6 text-white" />
+              )}
             </button>
           </div>
         </nav>
@@ -115,40 +136,50 @@ export default function Navbar() {
       {isMenuOpen && !isMdUp && (
         <div className="fixed top-[90px] left-5 right-5 z-40 mt-4 rounded-lg bg-white/80 dark:bg-gray-700/60 backdrop-blur-md px-6 py-4 shadow-md md:hidden">
           <ul className="flex flex-col gap-4 text-lg font-semibold text-gray-800 dark:text-white">
-            <li >
+            <li>
               <NavLink
-                    to="/"
-                    className={({isActive}) => 
-                      `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400":"text-gray-200 hover:text-red-400"}`
-                    }
-                    onClick={toggleMenu}
-                >
-                 Home
-                </NavLink>
+                to="/"
+                className={({ isActive }) =>
+                  `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400" : "text-gray-200 hover:text-red-400"}`
+                }
+                onClick={toggleMenu}
+              >
+                Home
+              </NavLink>
             </li>
-            
-            <li >
+
+            <li>
               <NavLink
-                    to="/projects"
-                    className={({isActive}) => 
-                      `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400":"text-gray-200 hover:text-red-400"}`
-                    }
-                    onClick={toggleMenu}
-                >
-                 Projects
-                </NavLink>
+                to="/projects"
+                className={({ isActive }) =>
+                  `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400" : "text-gray-200 hover:text-red-400"}`
+                }
+                onClick={toggleMenu}
+              >
+                Projects
+              </NavLink>
             </li>
             <li>
               <NavLink
-                    to="/contact"
-                    className={({isActive}) => 
-                      `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400":"text-gray-200 hover:text-red-400"}`
-                    }
-                    onClick={toggleMenu}
-                >
-                 Contact
-                </NavLink>
+                to="/contact"
+                className={({ isActive }) =>
+                  `cursor-pointer ${isActive ? "text-red-400 hover:text-gray-400" : "text-gray-200 hover:text-red-400"}`
+                }
+                onClick={toggleMenu}
+              >
+                Contact
+              </NavLink>
             </li>
+            <li>
+                <a
+                  href={cv}
+                  download
+                  className="cursor-pointer text-gray-200 hover:text-red-400"
+                  onClick={toggleMenu}
+                >
+                  Download CV 
+                </a>
+              </li>
           </ul>
         </div>
       )}

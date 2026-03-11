@@ -28,7 +28,7 @@ function Home() {
 
     <div className='w-full text-center md:text-4xl text-3xl  text-[#b2bec3] font-semibold md:mt-8 mt-[-10px] '>Technologies </div>
 
-    <div className='text-[#95a5a6] text-sm md:text-lg text-center'>Tools I use to transform my ideas into <span className='text-rose-400 font-semibold'>cool websites</span></div>
+    <div className='text-[#95a5a6] text-sm md:text-lg text-center mt-2 font-semibold'>Tools I use to transform my ideas into <span className='text-rose-400 font-semibold'>cool websites</span></div>
     <div className='w-full text-center md:mt-2 mt-1'>
       <Skills/>
     </div>
