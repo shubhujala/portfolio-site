@@ -13,14 +13,14 @@ const projects = [
     ],
     repo: "https://github.com/Shubh-ujala/dev_Project",
   },
-  {
-    title: "Personal Mini Project",
-    type: "Personal Mini Project",
-    date: " June 2025",
+   {
+    title: "BioPulse",
+    type: "Group Project",
+    date: " Dec 2026",
     description:
-      "A React-based currency converter that fetches real-time exchange rates using a public currency API and converts between user-selected currencies.",
-    technologies: ["React", "JavaScript", "REST API", "Tailwind CSS"],
-    repo: "https://github.com/Shubh-ujala/Backend_dev/tree/main/React/currencyConverter",
+      "In today’s digital healthcare era, delayed data can cost lives BioPulse tackles this challenge by enabling live remote patient monitoring and instant emergency alerts. basically it a MERN-based web application where doctors can monitor patient vitals like Heart Rate, Blood Pressure, and SpO₂ live—no refresh, no lag, no delay also in",
+    technologies: ["MongoDB", "Express.js & Node.js ", "React.JS", "Socket.io","Tailwind CSS"],
+    repo: "https://github.com/Shubh-ujala/BioSync",
   },
 ];
 
